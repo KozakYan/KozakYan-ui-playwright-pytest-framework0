@@ -1,0 +1,24 @@
+# virtual env
+.venv/
+
+# python cache
+__pycache__/
+*.pyc
+
+# pytest
+.pytest_cache/
+
+# playwright
+playwright-report/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+#allure
+allure-results/
+allure-report/

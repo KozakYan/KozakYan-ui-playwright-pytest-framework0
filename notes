@@ -1,0 +1,94 @@
+Login
+
+Перевірка inventory
+
+Сортування
+
+Додавання товару в кошик
+
+Checkout
+
+Logout
+
+Негативний логін
+
+Покрити:
+
+parametrization
+
+fixtures
+
+allure steps
+
+CI запуск
+
+
+
+https://sauce-demo.myshopify.com/
+
+https://www.saucedemo.com/
+
+ui-selenium-framework/
+ui-playwright-framework/
+
+
+ui-playwright-pytest-framework/
+├── .venv/
+├── requirements.txt
+├── pytest.ini
+├── pages/
+│   ├── base_page.py
+│   ├── login_page.py
+│   └── inventory_page.py
+├── tests/
+│   ├── test_login.py
+│   └── test_inventory.py
+└── conftest.py
+readme
+
+
+base_page.py
+
+open()
+
+click()
+
+fill()
+
+locator abstraction
+
+login_page.py
+
+login()
+
+get_error_message()
+
+inventory_page.py
+
+get_product_names()
+
+add_to_cart()
+click()
+fill()
+get_text()
+wait_for_element()
+is_visible()
+
+
+README має містити:
+
+Project description
+Tech stack
+Project structure
+How to run tests
+Allure reports
+CI
+
+У .gitignore має бути:
+
+.venv
+__pycache__
+.pytest_cache
+allure-results
+allure-report
+
