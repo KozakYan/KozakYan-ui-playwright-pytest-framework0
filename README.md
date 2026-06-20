@@ -1,62 +1,144 @@
-# "reward_report"
+# UI Test Automation Framework
 
-Цей проєкт автоматизує обробку розкладу та обчислення винагороди для співробітників, використовуючи дані з Excel-файлів.
+Automated UI testing framework for the Automation Exercise website using Python, Pytest and Playwright.
 
+## Tech Stack
 
-## 1 Вимоги
+* Python 3.12
+* Pytest
+* Playwright
+* Allure Report
+* Page Object Model (POM)
+* GitHub
 
-- Python 3.8 або новіший.
-- Бібліотеки:
-  - pandas
-  - openpyxl
+## Project Structure
 
-## Кроки для встановлення та налаштування
+```text
+.
+├── data/
+├── pages/
+├── tests/
+├── utils/
+├── conftest.py
+├── requirements.txt
+└── README.md
+```
 
-### 2 Скачування репозиторію
+### Pages
 
-	2.1 Щоб скачати цей репозиторій, виконайте команду:
-		'''Bash
-		git clone
+* Login Page
+* Product Catalog Page
+* Product Page
+* Cart Page
+* Header Component
 
-### 3 Налаштування віртуаьного середовища
+## Test Coverage
 
-	3.1 Для Linux/macOS
+### Login
 
-		3.1.1 Перейти у директорію репозиторію
+* Valid login
+* Invalid login
+* Empty email validation
+* Empty password validation
+* Logout
 
-		3.1.2 Створення віртуального оточення
-			python3 -m venv venv
+### Product Catalog
 
-		3.1.3 Активація віртуального середовища
-			source venv/bin/activate
+* Open catalog page
+* Product search
+* Add product to cart
 
-	3.2 Для Windows
+### Product Page
 
-		3.2.1 Перейти у директорію репозиторію
+* Open product page
+* Change product quantity
+* Add product to cart
 
-		3.2.2 Створення віртуального оточення
-			python -m venv venv
+### Cart
 
-		3.2.3 Активація віртуального середовища
-			venv\Scripts\activa
+* Open cart page
+* Remove product from cart
 
-### 4 Вствновлення залежностей
+### End-to-End
 
-	4.1 Встановлення бібліотек
-		pip install -r requirements.txt
+* Add product to cart and verify:
 
-### 5 Підготовка данних
+  * Product name
+  * Product price
 
+## Design Patterns
 
+* Page Object Model
+* Fixtures
+* Reusable Components
+* Test Data Separation
 
-### 6 Підготовка скрипта
+## Installation
 
+Clone repository:
 
+```bash
+git clone https://github.com/KozakYan/KozakYan-ui-playwright-pytest-framework0.git
+cd KozakYan-ui-playwright-pytest-framework0
+```
 
-### 7 Виконання скрипта
+Create virtual environment:
 
+```bash
+python -m venv .venv
+source .venv/bin/activate
+```
 
-### 8 Збереження змін
+Install dependencies:
 
+```bash
+pip install -r requirements.txt
+```
 
-### 9 Отримання змін з віддаленого репозиторія
+Install Playwright browsers:
+
+```bash
+playwright install
+```
+
+## Run Tests
+
+Run all tests:
+
+```bash
+pytest
+```
+
+Run specific test file:
+
+```bash
+pytest tests/test_login.py
+```
+
+## Generate Allure Report
+
+Run tests:
+
+```bash
+pytest --alluredir=allure-results
+```
+
+Generate report:
+
+```bash
+allure serve allure-results
+```
+
+## Author
+
+Yan Kozak
+
+Learning project created to practice UI test automation with Playwright and Pytest.
+
+## Continuous Integration
+
+GitHub Actions:
+- Install dependencies
+- Install Playwright browsers
+- Run Pytest suite
+- Store Allure results
